@@ -1,5 +1,5 @@
 # GPT Image Console for sub2api
-[![Deploy to Cloudflare Pages](https://img.shields.io/badge/Deploy%20to-Cloudflare%20Pages-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://dash.cloudflare.com/?to=/:account/pages/new)
+[![Cloudflare Pages Setup](https://img.shields.io/badge/Cloudflare%20Pages-Setup%20Guide-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://developers.cloudflare.com/pages/get-started/git-integration/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 [![React](https://img.shields.io/badge/React-Production%20UI-149ECA.svg)](https://react.dev/)
 [![Cloudflare Pages](https://img.shields.io/badge/Cloudflare-Pages%20Functions-F38020.svg)](https://developers.cloudflare.com/pages/)
@@ -63,13 +63,14 @@ ALLOW_CLIENT_CONFIG=true
 
 ## Deploy to Cloudflare Pages
 
-[![Deploy to Cloudflare Pages](https://img.shields.io/badge/Deploy%20to-Cloudflare%20Pages-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://dash.cloudflare.com/?to=/:account/pages/new)
+[![Cloudflare Pages Setup](https://img.shields.io/badge/Cloudflare%20Pages-Setup%20Guide-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://developers.cloudflare.com/pages/get-started/git-integration/)
 
 推荐使用 Cloudflare Pages 部署。本项目的 `functions/api/*.ts` 会自动作为 Pages Functions 运行，前端静态资源由 Cloudflare Pages 托管。
 
-1. 点击上方按钮打开 Cloudflare Pages 创建入口。
-2. 选择 `Connect to Git`，授权并选择本仓库。
-3. Framework preset 选择 `React (Vite)`，或手动填写以下配置：
+1. 打开 [Cloudflare Workers & Pages](https://dash.cloudflare.com/?to=/:account/workers-and-pages)。
+2. 选择 `Create application` -> `Pages` -> `Connect to Git`。
+3. 授权并选择本仓库。
+4. Framework preset 选择 `React (Vite)`，或手动填写以下配置：
 
 ```txt
 Build command: npm run build
@@ -86,7 +87,7 @@ npm run deploy
 
 不要使用 `npx wrangler deploy`。这是 Workers 的部署命令；Pages 项目应通过 Pages Git 集成自动部署，或通过 `wrangler pages deploy dist` 部署。
 
-4. 在 Environment variables 中添加：
+5. 在 Environment variables 中添加：
 
 ```txt
 SUB2API_BASE_URL=https://your-sub2api.example.com/v1
@@ -95,9 +96,9 @@ SUB2API_MODEL=gpt-image-2
 ALLOW_CLIENT_CONFIG=false
 ```
 
-5. 点击 `Save and Deploy` 完成部署。
+6. 点击 `Save and Deploy` 完成部署。
 
-> Cloudflare 官方 Deploy button 目前主要用于 Workers 应用。Pages 项目建议通过 Pages 的 Git 集成完成一键创建和持续部署。
+> 注意：Cloudflare 官方 Deploy button 目前主要用于 Workers 应用，容易进入 `Configure your Worker project` 流程。Pages 项目请从 `Workers & Pages` 总入口进入，并明确选择 `Pages`。
 
 ## 推送到 GitHub
 
