@@ -1,0 +1,11 @@
+name = "gpt-image-gallery"
+compatibility_date = "2026-06-02"
+pages_build_output_dir = "./dist"
+
+# Keep API keys in Cloudflare Pages Settings -> Environment variables.
+# Required:
+# - SUB2API_BASE_URL = https://your-sub2api.example.com/v1
+# - SUB2API_API_KEY = sk-xxxx
+# Optional:
+# - SUB2API_MODEL = gpt-image-2
+# - ALLOW_CLIENT_CONFIG = false

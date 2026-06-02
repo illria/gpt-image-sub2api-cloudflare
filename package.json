@@ -1,0 +1,32 @@
+{
+  "name": "gpt-image-sub2api-cloudflare",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A dark GPT Image 2 gallery UI that calls sub2api through Cloudflare Pages Functions.",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "pages:dev": "npm run build && wrangler pages dev dist",
+    "pages:deploy": "npm run build && wrangler pages deploy dist",
+    "cf:typegen": "wrangler types"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest",
+    "typescript": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "lucide-react": "latest"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "wrangler": "latest"
+  }
+}
