@@ -100,24 +100,6 @@ ALLOW_CLIENT_CONFIG=false
 
 > 注意：Cloudflare 官方 Deploy button 目前主要用于 Workers 应用，容易进入 `Configure your Worker project` 流程。Pages 项目请从 `Workers & Pages` 总入口进入，并明确选择 `Pages`。
 
-## 推送到 GitHub
-
-已有空仓库时：
-
-```bash
-chmod +x scripts/push-github.sh
-./scripts/push-github.sh your-github-name/gpt-image-gallery
-```
-
-还没有仓库，但本机装了 GitHub CLI 时：
-
-```bash
-chmod +x scripts/create-and-push-github.sh
-./scripts/create-and-push-github.sh your-github-name/gpt-image-gallery private
-```
-
-`private` 可以改成 `public`。
-
 ## API 路由
 
 ### `GET /api/config`
