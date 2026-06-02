@@ -1,5 +1,4 @@
-# GPT Image Console for sub2api on Cloudflare Pages
-
+# GPT Image Console for sub2api
 [![Deploy to Cloudflare Pages](https://img.shields.io/badge/Deploy%20to-Cloudflare%20Pages-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://dash.cloudflare.com/?to=/:account/pages/new)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 [![React](https://img.shields.io/badge/React-Production%20UI-149ECA.svg)](https://react.dev/)
