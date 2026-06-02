@@ -76,7 +76,16 @@ ALLOW_CLIENT_CONFIG=true
 Build command: npm run build
 Build output directory: dist
 Root directory: /
+Deploy command: 留空
 ```
+
+如果你的 Cloudflare 创建流程显示 `Deploy command` 并且必须填写，请使用：
+
+```txt
+npm run deploy
+```
+
+不要使用 `npx wrangler deploy`。这是 Workers 的部署命令；Pages 项目应通过 Pages Git 集成自动部署，或通过 `wrangler pages deploy dist` 部署。
 
 4. 在 Environment variables 中添加：
 
@@ -162,7 +171,7 @@ CLOUDFLARE_PAGES_PROJECT_NAME
 ```bash
 npm install
 npm run build
-npx wrangler pages deploy dist
+npm run deploy
 ```
 
 ## 目录结构

@@ -7,9 +7,10 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "tsc -b && vite build",
+    "deploy": "wrangler pages deploy dist",
     "preview": "vite preview --host 0.0.0.0",
     "pages:dev": "npm run build && wrangler pages dev dist",
-    "pages:deploy": "npm run build && wrangler pages deploy dist",
+    "pages:deploy": "npm run build && npm run deploy",
     "cf:typegen": "wrangler types"
   },
   "dependencies": {
